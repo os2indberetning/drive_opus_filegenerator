@@ -1,0 +1,8 @@
+{
+  "LogFile": "C:/Logs/OpusFileGenerator.log",
+  "CronSchedule": "0 0/15 0 ? * * *",
+  "MunicipalityNumber": 123,
+  "FilePath": "c:/temp/ind01",
+  "FileName": "ind01_befordring.txt",
+  "FileHeader": "026 Test Kommune"
+}
