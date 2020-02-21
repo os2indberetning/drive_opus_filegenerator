@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace OpusFileGenerator.Utility
@@ -40,7 +41,8 @@ namespace OpusFileGenerator.Utility
                     exceptions.Add(ex);
                 }
             }
-            throw new AggregateException(exceptions);
+            // throw the last/most recent exception
+            throw exceptions.Last();
         }
     }
 }
