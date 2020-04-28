@@ -57,7 +57,7 @@ namespace OpusFileGenerator.Service
             File.AppendAllLines(outFilePath, lines);
             logger.LogInformation($"Appended {records.Count()} lines to {outFilePath}");
 
-            var backupFilePath = Path.Combine(configuration["FilePath"], "Backup", $"{DateTime.Now:yyyyMMddTHHmmss}_{configuration["FileName"]}");
+            var backupFilePath = Path.Combine(configuration["BackupPath"], $"{DateTime.Now:yyyyMMddTHHmmss}_{configuration["FileName"]}");
             Directory.CreateDirectory(Path.GetDirectoryName(backupFilePath));
             File.Copy(outFilePath, backupFilePath);
             logger.LogInformation($"Created backup file {backupFilePath}");
